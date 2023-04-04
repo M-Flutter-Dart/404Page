@@ -49,22 +49,22 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5),
-
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 15.0, vertical: 5),
                 child: Column(
                   children: [
-                    Image.asset('assets/images/404.png'),
                     Column(
                       children: [
+                        Image.asset('assets/images/404.png'),
                         Text(
                           'Opps! Looks like someone ',
                           style: Theme.of(context)
                               .textTheme
                               .headlineMedium
                               ?.copyWith(
-                              color: Color(0xFFE75E76),
-                              fontWeight: FontWeight.bold,
-                              fontSize: 24),
+                                  color: Color(0xFFE75E76),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 24),
                         ),
                         Text(
                           'took a bite of this page',
@@ -72,9 +72,9 @@ class HomeScreen extends StatelessWidget {
                               .textTheme
                               .headlineMedium
                               ?.copyWith(
-                              color: Color(0xFFE75E76),
-                              fontWeight: FontWeight.bold,
-                              fontSize: 24),
+                                  color: Color(0xFFE75E76),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 24),
                         ),
                       ],
                     ),
@@ -89,7 +89,7 @@ class HomeScreen extends StatelessWidget {
                               .textTheme
                               .headlineMedium
                               ?.copyWith(
-                              fontWeight: FontWeight.normal, fontSize: 16),
+                                  fontWeight: FontWeight.normal, fontSize: 16),
                         ),
                         Text(
                           " doesn\'t exist. If you think something is",
@@ -97,7 +97,7 @@ class HomeScreen extends StatelessWidget {
                               .textTheme
                               .headlineMedium
                               ?.copyWith(
-                              fontWeight: FontWeight.normal, fontSize: 16),
+                                  fontWeight: FontWeight.normal, fontSize: 16),
                         ),
                         Text(
                           ' broken, report a problem',
@@ -105,7 +105,7 @@ class HomeScreen extends StatelessWidget {
                               .textTheme
                               .headlineMedium
                               ?.copyWith(
-                              fontWeight: FontWeight.normal, fontSize: 16),
+                                  fontWeight: FontWeight.normal, fontSize: 16),
                         ),
                       ],
                     ),
@@ -118,15 +118,20 @@ class HomeScreen extends StatelessWidget {
                         color: const Color(0xFFF6F6F6),
                         height: 50,
                         child: TextField(
-                          maxLines: null,
+                          maxLines: null, cursorColor: Color(0xFFE75E76),
                           decoration: InputDecoration(
-                              suffix: ElevatedButton(
-                                onPressed: () {},
-                                style: const ButtonStyle(
-                                    elevation: MaterialStatePropertyAll(0),
-                                    backgroundColor: MaterialStatePropertyAll(
-                                        Color(0xFFE75E76))),
-                                child: Text("Search"),
+                              prefixIcon:
+                                  Image.asset('assets/images/Vector.png'),
+                              suffixIcon: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: ElevatedButton(
+                                  onPressed: () {},
+                                  style: const ButtonStyle(
+                                      elevation: MaterialStatePropertyAll(0),
+                                      backgroundColor: MaterialStatePropertyAll(
+                                          Color(0xFFE75E76))),
+                                  child: Text("Search"),
+                                ),
                               ),
                               hintText: 'What are You Looking for?',
                               fillColor: Color(0xFFE75E76).withOpacity(0.28),
@@ -142,18 +147,19 @@ class HomeScreen extends StatelessWidget {
                       height: 40,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           SizedBox(
-                            height: double.maxFinite,
                             child: ElevatedButton(
                               onPressed: () {},
                               style: ButtonStyle(
                                   shape: MaterialStatePropertyAll(
                                       RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(10))),
-                                  elevation: MaterialStatePropertyAll(0),
-                                  backgroundColor:
-                                  MaterialStatePropertyAll(Color(0xFFE75E76))),
+                                          borderRadius:
+                                              BorderRadius.circular(10))),
+                                  elevation: const MaterialStatePropertyAll(0),
+                                  backgroundColor: const MaterialStatePropertyAll(
+                                      Color(0xFFE75E76))),
                               child: const Text("Return Home"),
                             ),
                           ),
@@ -166,7 +172,8 @@ class HomeScreen extends StatelessWidget {
                                 .textTheme
                                 .headlineMedium
                                 ?.copyWith(
-                                fontWeight: FontWeight.normal, fontSize: 16),
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 16),
                           ),
                           const SizedBox(
                             width: 10,
@@ -177,36 +184,141 @@ class HomeScreen extends StatelessWidget {
                                 .textTheme
                                 .headlineMedium
                                 ?.copyWith(
-                                fontWeight: FontWeight.normal, fontSize: 16),
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 16),
                           ),
                         ],
                       ),
                     ),
-
                   ],
                 ),
               ),
-              const SizedBox(height: 70,),
+              SizedBox(
+                height: 87,
+                child:
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Image.asset(
+                        'assets/images/Group 11.png',
+                        scale: 3 / 1,
+                        fit: BoxFit.contain,
+                      ),
+                    ],
+                  ),
+              ),
+              const SizedBox(
+                height: 70,
+              ),
               Container(
                 color: const Color(0xFF282828),
-                height: 292,
+                //height: 262,
                 width: double.infinity,
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    SizedBox(
-                      width: 100,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 8.0, top: 20, bottom: 10),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: SizedBox(
                         child: Image.asset(
-                          "assets/images/suzyscones.png",
-                          scale: 1 / 9,
+                          "assets/images/SuzyScones2.png",
+                          scale: 1.5 / 1,
                           fit: BoxFit.contain,
                         ),
                       ),
                     ),
+                    Column(
+                      children: [
+                        Text(
+                          'Lorem ipsum dolor sit amet, consectetur',
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyMedium
+                              ?.copyWith(
+                                  fontWeight: FontWeight.normal,
+                                  fontSize: 12,
+                                  color: Colors.white),
+                        ),
+                        Text(
+                          'adipiscing elit. Donec pretium egestas',
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyMedium
+                              ?.copyWith(
+                                  fontWeight: FontWeight.normal,
+                                  fontSize: 12,
+                                  color: Colors.white),
+                        ),
+                        Text(
+                          'nunc.',
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyMedium
+                              ?.copyWith(
+                                  fontWeight: FontWeight.normal,
+                                  fontSize: 12,
+                                  color: Colors.white),
+                        ),
+                        SizedBox(
+                          width: 180,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 15.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Image.asset(
+                                  "assets/images/Instagram.png",
+                                ),
+                                Image.asset(
+                                  "assets/images/Dribble.png",
+                                ),
+                                Image.asset(
+                                  "assets/images/Twitter.png",
+                                ),
+                                Image.asset(
+                                  "assets/images/Youtubelogo.png",
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 12.0, bottom: 10),
+                      child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Copyright © 2023 Suzyscones Website',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyMedium
+                                  ?.copyWith(
+                                      fontWeight: FontWeight.normal,
+                                      fontSize: 14,
+                                      color: Colors.white60),
+                            ),
+                            Text(
+                              'All right reserved',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyMedium
+                                  ?.copyWith(
+                                      fontWeight: FontWeight.normal,
+                                      fontSize: 14,
+                                      color: Colors.white60),
+                            ),
+                          ]),
+                    ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ));
