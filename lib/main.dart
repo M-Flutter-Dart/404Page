@@ -25,6 +25,9 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery
+        .of(context)
+        .size;
     return Scaffold(
         backgroundColor: appPrimaryColor,
         appBar: AppBar(
@@ -48,168 +51,216 @@ class HomeScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 15.0, vertical: 5),
-                child: Column(
-                  children: [
-                    Column(
+              Column(
+                children: [
+                  Image.asset('assets/images/404.png'),
+                  SizedBox(
+                    height: 400,
+                    child: Stack(
                       children: [
-                        Image.asset('assets/images/404.png'),
-                        Text(
-                          'Opps! Looks like someone ',
-                          style: Theme.of(context)
-                              .textTheme
-                              .headlineMedium
-                              ?.copyWith(
-                                  color: Color(0xFFE75E76),
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 24),
-                        ),
-                        Text(
-                          'took a bite of this page',
-                          style: Theme.of(context)
-                              .textTheme
-                              .headlineMedium
-                              ?.copyWith(
-                                  color: Color(0xFFE75E76),
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 24),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Column(
-                      children: [
-                        Text(
-                          'Sorry, the page you,re looking for',
-                          style: Theme.of(context)
-                              .textTheme
-                              .headlineMedium
-                              ?.copyWith(
-                                  fontWeight: FontWeight.normal, fontSize: 16),
-                        ),
-                        Text(
-                          " doesn\'t exist. If you think something is",
-                          style: Theme.of(context)
-                              .textTheme
-                              .headlineMedium
-                              ?.copyWith(
-                                  fontWeight: FontWeight.normal, fontSize: 16),
-                        ),
-                        Text(
-                          ' broken, report a problem',
-                          style: Theme.of(context)
-                              .textTheme
-                              .headlineMedium
-                              ?.copyWith(
-                                  fontWeight: FontWeight.normal, fontSize: 16),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(15),
-                      child: Container(
-                        color: const Color(0xFFF6F6F6),
-                        height: 50,
-                        child: TextField(
-                          maxLines: null, cursorColor: Color(0xFFE75E76),
-                          decoration: InputDecoration(
-                              prefixIcon:
-                                  Image.asset('assets/images/Vector.png'),
-                              suffixIcon: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: ElevatedButton(
-                                  onPressed: () {},
-                                  style: const ButtonStyle(
-                                      elevation: MaterialStatePropertyAll(0),
-                                      backgroundColor: MaterialStatePropertyAll(
-                                          Color(0xFFE75E76))),
-                                  child: Text("Search"),
+                        Positioned(
+                            left: size.width * 0.45,
+                            right: 1,
+                            top: 160,
+                            child: Image.asset(
+                              'assets/images/Group 11.png', fit: BoxFit.fill,)),
+                        Padding(
+                          padding:
+                          const EdgeInsets.symmetric(
+                              horizontal: 15.0, vertical: 5),
+                          child: Column(
+                            children: [
+                              Column(
+                                children: [
+                                  Text(
+                                    'Opps! Looks like someone ',
+                                    style: Theme
+                                        .of(context)
+                                        .textTheme
+                                        .headlineMedium
+                                        ?.copyWith(
+                                        color: Color(0xFFE75E76),
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 24),
+                                  ),
+                                  Text(
+                                    'took a bite of this page',
+                                    style: Theme
+                                        .of(context)
+                                        .textTheme
+                                        .headlineMedium
+                                        ?.copyWith(
+                                        color: Color(0xFFE75E76),
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 24),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Column(
+                                children: [
+                                  Text(
+                                    'Sorry, the page you,re looking for',
+                                    style: Theme
+                                        .of(context)
+                                        .textTheme
+                                        .headlineMedium
+                                        ?.copyWith(
+                                        fontWeight: FontWeight.normal,
+                                        fontSize: 16),
+                                  ),
+                                  Text(
+                                    " doesn\'t exist. If you think something is",
+                                    style: Theme
+                                        .of(context)
+                                        .textTheme
+                                        .headlineMedium
+                                        ?.copyWith(
+                                        fontWeight: FontWeight.normal,
+                                        fontSize: 16),
+                                  ),
+                                  Text(
+                                    ' broken, report a problem',
+                                    style: Theme
+                                        .of(context)
+                                        .textTheme
+                                        .headlineMedium
+                                        ?.copyWith(
+                                        fontWeight: FontWeight.normal,
+                                        fontSize: 16),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 15),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(15),
+                                  child: Container(
+                                    color: const Color(0xFFF6F6F6),
+                                    height: 50,
+                                    child: TextField(
+                                      cursorColor: Color(0xFFE75E76),
+                                      maxLines: null,
+                                      decoration: InputDecoration(
+                                          suffixIcon: Padding(
+                                            padding: const EdgeInsets.only(
+                                                right: 8.0),
+                                            child: Padding(
+                                              padding:
+                                              const EdgeInsets.all(8.0),
+                                              child: ElevatedButton(
+                                                onPressed: () {},
+                                                style: const ButtonStyle(
+                                                    elevation:
+                                                    MaterialStatePropertyAll(
+                                                        0),
+                                                    backgroundColor:
+                                                    MaterialStatePropertyAll(
+                                                        Color(0xFFE75E76))),
+                                                child: Text("Search"),
+                                              ),
+                                            ),
+                                          ),
+                                          prefixIcon: Icon(
+                                            Icons.search,
+                                            color: Color(0xFFE75E76),
+                                          ),
+                                          hintText: 'What are You Looking for?',
+                                          fillColor: Color(0xFFE75E76)
+                                              .withOpacity(0.28),
+                                          filled: true,
+                                          border: InputBorder.none),
+                                    ),
+                                  ),
                                 ),
                               ),
-                              hintText: 'What are You Looking for?',
-                              fillColor: Color(0xFFE75E76).withOpacity(0.28),
-                              filled: true,
-                              border: InputBorder.none),
+                              const SizedBox(
+                                height: 30,
+                              ),
+                              SizedBox(
+                                height: 40,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 25),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      SizedBox(
+                                        height: double.maxFinite,
+                                        child: ElevatedButton(
+                                          onPressed: () {},
+                                          style: ButtonStyle(
+                                              shape: MaterialStatePropertyAll(
+                                                  RoundedRectangleBorder(
+                                                      borderRadius:
+                                                      BorderRadius.circular(
+                                                          10))),
+                                              elevation:
+                                              MaterialStatePropertyAll(0),
+                                              backgroundColor:
+                                              MaterialStatePropertyAll(
+                                                  Color(0xFFE75E76))),
+                                          child: const Text("Return Home"),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      Text(
+                                        'Or',
+                                        style: Theme
+                                            .of(context)
+                                            .textTheme
+                                            .headlineMedium
+                                            ?.copyWith(
+                                            fontWeight: FontWeight.normal,
+                                            fontSize: 16),
+                                      ),
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      Text(
+                                        'Report a Problem',
+                                        style: Theme
+                                            .of(context)
+                                            .textTheme
+                                            .headlineMedium
+                                            ?.copyWith(
+                                            fontWeight: FontWeight.normal,
+                                            fontSize: 16),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
-                      ),
+                      ],
                     ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    SizedBox(
-                      height: 40,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          SizedBox(
-                            child: ElevatedButton(
-                              onPressed: () {},
-                              style: ButtonStyle(
-                                  shape: MaterialStatePropertyAll(
-                                      RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(10))),
-                                  elevation: const MaterialStatePropertyAll(0),
-                                  backgroundColor: const MaterialStatePropertyAll(
-                                      Color(0xFFE75E76))),
-                              child: const Text("Return Home"),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Text(
-                            'Or',
-                            style: Theme.of(context)
-                                .textTheme
-                                .headlineMedium
-                                ?.copyWith(
-                                    fontWeight: FontWeight.normal,
-                                    fontSize: 16),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Text(
-                            'Report a Problem',
-                            style: Theme.of(context)
-                                .textTheme
-                                .headlineMedium
-                                ?.copyWith(
-                                    fontWeight: FontWeight.normal,
-                                    fontSize: 16),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 87,
-                child:
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Image.asset(
-                        'assets/images/Group 11.png',
-                        scale: 3 / 1,
-                        fit: BoxFit.contain,
-                      ),
-                    ],
                   ),
+                ],
               ),
-              const SizedBox(
-                height: 70,
-              ),
+              // Column(
+              //   children: [
+              //     SizedBox(
+              //       height: 10,
+              //       child: Row(
+              //         mainAxisAlignment: MainAxisAlignment.end,
+              //         children: [
+              //           Image.asset('assets/images/Group 11.png'),
+              //         ],
+              //       ),
+              //     ),
+              //   ],
+              // ),
+              // const SizedBox(
+              //   height: 70,
+              // ),
               Container(
                 color: const Color(0xFF282828),
                 //height: 262,
@@ -235,33 +286,36 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         Text(
                           'Lorem ipsum dolor sit amet, consectetur',
-                          style: Theme.of(context)
+                          style: Theme
+                              .of(context)
                               .textTheme
                               .bodyMedium
                               ?.copyWith(
-                                  fontWeight: FontWeight.normal,
-                                  fontSize: 12,
-                                  color: Colors.white),
+                              fontWeight: FontWeight.normal,
+                              fontSize: 12,
+                              color: Colors.white),
                         ),
                         Text(
                           'adipiscing elit. Donec pretium egestas',
-                          style: Theme.of(context)
+                          style: Theme
+                              .of(context)
                               .textTheme
                               .bodyMedium
                               ?.copyWith(
-                                  fontWeight: FontWeight.normal,
-                                  fontSize: 12,
-                                  color: Colors.white),
+                              fontWeight: FontWeight.normal,
+                              fontSize: 12,
+                              color: Colors.white),
                         ),
                         Text(
                           'nunc.',
-                          style: Theme.of(context)
+                          style: Theme
+                              .of(context)
                               .textTheme
                               .bodyMedium
                               ?.copyWith(
-                                  fontWeight: FontWeight.normal,
-                                  fontSize: 12,
-                                  color: Colors.white),
+                              fontWeight: FontWeight.normal,
+                              fontSize: 12,
+                              color: Colors.white),
                         ),
                         SizedBox(
                           width: 180,
@@ -296,23 +350,25 @@ class HomeScreen extends StatelessWidget {
                           children: [
                             Text(
                               'Copyright © 2023 Suzyscones Website',
-                              style: Theme.of(context)
+                              style: Theme
+                                  .of(context)
                                   .textTheme
                                   .bodyMedium
                                   ?.copyWith(
-                                      fontWeight: FontWeight.normal,
-                                      fontSize: 14,
-                                      color: Colors.white60),
+                                  fontWeight: FontWeight.normal,
+                                  fontSize: 14,
+                                  color: Colors.white60),
                             ),
                             Text(
                               'All right reserved',
-                              style: Theme.of(context)
+                              style: Theme
+                                  .of(context)
                                   .textTheme
                                   .bodyMedium
                                   ?.copyWith(
-                                      fontWeight: FontWeight.normal,
-                                      fontSize: 14,
-                                      color: Colors.white60),
+                                  fontWeight: FontWeight.normal,
+                                  fontSize: 14,
+                                  color: Colors.white60),
                             ),
                           ]),
                     ),
