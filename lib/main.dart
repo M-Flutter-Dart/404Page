@@ -4,7 +4,7 @@ import 'package:suzyscones/theme.dart';
 import 'colors.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: const HomeScreen(),
       theme: AppTheme.light(),
     );
   }
@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
           automaticallyImplyLeading: false,
           elevation: 1,
           backgroundColor: appPrimaryColor,
-          actions: [IconButton(onPressed: () {}, icon: Icon(Icons.menu))],
+          actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.menu))],
           centerTitle: true,
           leading: SizedBox(
             width: 100,
@@ -112,7 +112,7 @@ class HomeScreen extends StatelessWidget {
                                         fontSize: 14),
                                   ),
                                   Text(
-                                    " doesn\'t exist. If you think something is",
+                                    " doesn't exist. If you think something is",
                                     style: Theme
                                         .of(context)
                                         .textTheme
