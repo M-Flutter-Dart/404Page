@@ -53,7 +53,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               Column(
                 children: [
-                  Image.asset('assets/images/404.png'),
+                  Image.asset('assets/images/404.png', height: 300,),
                   SizedBox(
                     height: 400,
                     child: Stack(
@@ -79,7 +79,7 @@ class HomeScreen extends StatelessWidget {
                                         .textTheme
                                         .headlineMedium
                                         ?.copyWith(
-                                        color: Color(0xFFE75E76),
+                                        color: const Color(0xFFE75E76),
                                         fontWeight: FontWeight.bold,
                                         fontSize: 24),
                                   ),
@@ -90,7 +90,7 @@ class HomeScreen extends StatelessWidget {
                                         .textTheme
                                         .headlineMedium
                                         ?.copyWith(
-                                        color: Color(0xFFE75E76),
+                                        color: const Color(0xFFE75E76),
                                         fontWeight: FontWeight.bold,
                                         fontSize: 24),
                                   ),
@@ -109,7 +109,7 @@ class HomeScreen extends StatelessWidget {
                                         .headlineMedium
                                         ?.copyWith(
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 16),
+                                        fontSize: 14),
                                   ),
                                   Text(
                                     " doesn\'t exist. If you think something is",
@@ -119,7 +119,7 @@ class HomeScreen extends StatelessWidget {
                                         .headlineMedium
                                         ?.copyWith(
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 16),
+                                        fontSize: 14),
                                   ),
                                   Text(
                                     ' broken, report a problem',
@@ -129,22 +129,22 @@ class HomeScreen extends StatelessWidget {
                                         .headlineMedium
                                         ?.copyWith(
                                         fontWeight: FontWeight.normal,
-                                        fontSize: 16),
+                                        fontSize: 14),
                                   ),
                                 ],
                               ),
                               const SizedBox(
-                                height: 10,
+                                height: 30,
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(left: 15),
+                                padding: const EdgeInsets.symmetric(horizontal: 15),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(15),
                                   child: Container(
                                     color: const Color(0xFFF6F6F6),
                                     height: 50,
                                     child: TextField(
-                                      cursorColor: Color(0xFFE75E76),
+                                      cursorColor: const Color(0xFFE75E76),
                                       maxLines: null,
                                       decoration: InputDecoration(
                                           suffixIcon: Padding(
@@ -162,16 +162,16 @@ class HomeScreen extends StatelessWidget {
                                                     backgroundColor:
                                                     MaterialStatePropertyAll(
                                                         Color(0xFFE75E76))),
-                                                child: Text("Search"),
+                                                child: const Text("Search"),
                                               ),
                                             ),
                                           ),
-                                          prefixIcon: Icon(
+                                          prefixIcon: const Icon(
                                             Icons.search,
                                             color: Color(0xFFE75E76),
                                           ),
                                           hintText: 'What are You Looking for?',
-                                          fillColor: Color(0xFFE75E76)
+                                          fillColor: const Color(0xFFE75E76)
                                               .withOpacity(0.28),
                                           filled: true,
                                           border: InputBorder.none),
@@ -180,7 +180,7 @@ class HomeScreen extends StatelessWidget {
                                 ),
                               ),
                               const SizedBox(
-                                height: 30,
+                                height: 40,
                               ),
                               SizedBox(
                                 height: 40,
@@ -200,9 +200,9 @@ class HomeScreen extends StatelessWidget {
                                                       BorderRadius.circular(
                                                           10))),
                                               elevation:
-                                              MaterialStatePropertyAll(0),
+                                              const MaterialStatePropertyAll(0),
                                               backgroundColor:
-                                              MaterialStatePropertyAll(
+                                              const MaterialStatePropertyAll(
                                                   Color(0xFFE75E76))),
                                           child: const Text("Return Home"),
                                         ),
@@ -230,8 +230,8 @@ class HomeScreen extends StatelessWidget {
                                             .textTheme
                                             .headlineMedium
                                             ?.copyWith(
-                                            fontWeight: FontWeight.normal,
-                                            fontSize: 16),
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 16, decoration: TextDecoration.underline),
                                       ),
                                     ],
                                   ),
